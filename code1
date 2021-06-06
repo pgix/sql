@@ -1,0 +1,8 @@
+select * from bigquery-public-data.new_york_citibike.citibike_trips where gender = 'female'
+select * from bigquery-public-data.new_york_citibike.citibike_trips where gender = 'male'
+select * from bigquery-public-data.new_york_citibike.citibike_trips
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500 select * from bigquery-public-data.new_york_citibike.citibike_trips
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500 select * from `bigquery-public-data.new_york_citibike.citibike_trips' where gender = 'male'
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500 select * from `bigquery-public-data.new_york_citibike.citibike_trips' LIMIT 10
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500
+SELECT * FROM `bigquery-public-data.new_york_citibike.citibike_trips` LIMIT 10
