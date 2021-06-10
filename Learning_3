@@ -1,0 +1,75 @@
+Query succeeded
+Query completed in 0.28 sec
+14:47
+1
+SELECT name, city
+2
+FROM  `pggoogl.TestSQL1_PG.customer_address` AS FUN
+
+Job ID	
+pggoogl:US.bquxjob_78e5ffa7_179f62dce6a
+User	
+praveengeorgeix@gmail.com
+Location	
+United States (US)
+Creation time	
+10 Jun 2021, 14:47:48
+Start time	
+10 Jun 2021, 14:47:48
+End time	
+10 Jun 2021, 14:47:48
+Duration	
+0.3 sec
+Bytes processed	
+777 B
+Bytes billed	
+10 MB
+Job priority	
+INTERACTIVE
+Destination table	
+Temporary table
+Use legacy SQL	
+false
+14:42
+SELECT * FROM `pggoogl.TestSQL1_PG.customer_address` LIMIT 1000
+14:41
+SELECT FROM `pggoogl.TestSQL1_PG.customer_address` LIMIT 1000
+14:33
+SELECT language, title, SUM(views) AS views FROM `bigquery-samples.wikipedia_benchmark.Wiki10B` WHERE title LIKE '%Google%' GROUP BY language, title ORDER BY views DESC;
+06/06/2021
+22:09
+SELECT count(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2018` where number_of_strikes >= 10
+22:09
+SELECT count(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` where number_of_strikes >= 10
+22:08
+SELECT count(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` where number_of_strikes >= 100
+22:08
+SELECT number_of_strikes FROM `bigquery-public-data.noaa_lightning.lightning_2019` where number_of_strikes >= 100
+22:07
+SELECT min(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` LIMIT 1000
+22:07
+SELECT max(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` LIMIT 1000
+22:07
+SELECT count(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` LIMIT 1000
+22:06
+SELECT avg(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` LIMIT 1000
+22:06
+SELECT sum(number_of_strikes) FROM `bigquery-public-data.noaa_lightning.lightning_2019` LIMIT 1000
+22:05
+SELECT * FROM `bigquery-public-data.noaa_lightning.lightning_2019` LIMIT 1000
+21:49
+select * from bigquery-public-data.new_york_citibike.citibike_trips where gender = 'female'
+21:48
+select * from bigquery-public-data.new_york_citibike.citibike_trips where gender = 'male'
+21:48
+select * from bigquery-public-data.new_york_citibike.citibike_trips
+21:48
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500 select * from bigquery-public-data.new_york_citibike.citibike_trips
+21:47
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500 select * from `bigquery-public-data.new_york_citibike.citibike_trips' where gender = 'male'
+21:46
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500 select * from `bigquery-public-data.new_york_citibike.citibike_trips' LIMIT 10
+21:44
+SELECT tripduration FROM `bigquery-public-data.new_york_citibike.citibike_trips` where tripduration >= 500
+21:43
+SELECT * FROM `bigquery-public-data.new_york_citibike.citibike_trips` LIMIT 10
