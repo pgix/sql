@@ -12,3 +12,18 @@ FROM
 INNER JOIN 
     `bigquery-public-data.world_bank_intl_education.country_summary` 
 ON `bigquery-public-data.world_bank_intl_education.country_summary`.country_code = `bigquery-public-data.world_bank_intl_education.international_education`.country_code
+
+
+
+-- using aliases "AS" in table naming
+
+SELECT 
+    `edu`.country_name, 
+    `Summary`.country_code AS SummaryTableCode, 
+    `edu`.country_code AS EducationTableCode,
+    `edu`.value
+FROM 
+    `bigquery-public-data.world_bank_intl_education.international_education` AS edu
+INNER JOIN 
+    `bigquery-public-data.world_bank_intl_education.country_summary` AS Summary
+ON `summary`.country_code = `edu`.country_code
