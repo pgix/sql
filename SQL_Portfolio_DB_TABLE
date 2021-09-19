@@ -1,0 +1,101 @@
+--Creating database and tables
+
+--create db
+
+create database myDB
+
+-- use database
+
+use myDB
+
+--create table artist
+
+create table artists (
+	id int primary key,
+	name nvarchar (max),
+	DOB date,
+	title nchar(10),
+	)
+
+--create table work
+
+create table work (
+	name nvarchar (max),
+	id int primary key,
+	description nvarchar (max),
+	link nvarchar (max),
+	artists_id int foreign key references artists(id)
+)
+
+--create table reviewer
+
+create table reviewer (
+	id int primary key,
+	name nvarchar (max),
+	description nvarchar (max),
+	title nchar (10),
+	DOB date
+)
+
+
+--create table review and set foreign key
+
+create table review (
+	id int primary key,
+	comments nvarchar (max),
+	number_rating int
+)
+
+--add new attributes work_id to existing table
+
+alter table review 
+	add work_id int foreign key references work(id)
+
+--add new attributes reviewer_id to existing table
+
+alter table review 
+	add reviewer_id int foreign key references reviewer(id)
+
+
+--Adding into tables
+
+use myDB
+
+-- manual entry to table
+
+insert into artists
+	--values (2, 'Leonardo Green', '12-07-1996', 'Painter')
+	VALUES (3,'Elton Green','1990-03-03','Pianist')
+    --VALUES (4,'Leonardo Richardson','1975-04-09','Painter')
+
+--Test whether populated
+select * from artists
+
+-- delete id 4 from artists
+delete from artists
+	where id = 4
+
+-- insert reviewer table
+INSERT INTO [reviewer] VALUES (1,'Marcus Delfoe','Critic','Mr','1996-03-07')
+INSERT INTO [reviewer] VALUES (2,'Henry Almanc','Critic','Mr','1989-06-09')
+INSERT INTO [reviewer] VALUES (3,'Frank Wenshov','Editor','Mr','1974-01-10')
+
+--test data populated in reviewwer
+
+select * from reviewer
+
+--insert into Works table, last int is foreign key from artists
+INSERT INTO [work] VALUES ('Guitar Solo 1',1,'A guitar solo in D minor scale','https://theLink.com',1) 
+INSERT INTO [work] VALUES ('Fur Elise',2,'Cover of Fur Elise by Beethoven','https://theLink.com',2)
+INSERT INTO [work] VALUES ('My Life',3,'A painting that depicts my life','https://theLink.com',3)
+INSERT INTO [work] VALUES ('Guitar Solo 2',4,'A guitar solo in C major scale','https://theLink.com',1)
+
+select * from reviewer
+
+--insert into review table
+INSERT INTO [Review] VALUES (1,'Very Good',9,1,1)
+INSERT INTO [Review] VALUES (2,'Good',7,2,2)
+INSERT INTO [Review] VALUES (3,'Good',7,3,2)
+
+select * from review
+
